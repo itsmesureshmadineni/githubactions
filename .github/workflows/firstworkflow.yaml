@@ -14,3 +14,16 @@ jobs:
                  pwd
                  npm -v
                  docker -v
+    depends-job:
+        runs-on: windows-lates
+        needs: run-on-macos
+        steps:
+            - name: print outpot
+              run: Write-Output " windows string"
+            - name: error
+              run: doesnotexist
+    run-on-macos:
+        runs-on: macos-latest
+        steps:
+            - name: check software version
+              run: sw_vers
