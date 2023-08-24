@@ -15,8 +15,8 @@ jobs:
                  npm -v
                  docker -v
     depends-job:
-        runs-on: windows-lates
-       # needs: run-on-macos
+        runs-on: windows-latest
+        needs: run-on-macos
         steps:
             - name: print outpot
               run: Write-Output " windows string"
