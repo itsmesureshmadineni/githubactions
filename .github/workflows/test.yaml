@@ -15,6 +15,4 @@ jobs:
                  cd testfolder
                  pwd
                  touch testfile.txt
-                 echo "data copied to testfile from git hub actions" >> testfile.txt
-                 echo " --------------- "
-                 cat testfile.txt
+                 echo "::error::missing semicolumn"
