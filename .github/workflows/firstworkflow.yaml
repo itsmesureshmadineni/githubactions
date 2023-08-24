@@ -20,8 +20,8 @@ jobs:
         steps:
             - name: print outpot
               run: Write-Output " windows string"
-            - name: error
-              run: doesnotexist
+           # - name: error
+            #  run: doesnotexist
     run-on-macos:
         runs-on: macos-latest
         steps:
