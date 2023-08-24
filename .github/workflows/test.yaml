@@ -13,6 +13,7 @@ jobs:
                  echo "------------"
                  mkdir testfolder
                  cd testfolder
+                 pwd
                  touch testfile.txt
                  echo "data copied to testfile from git hub actions" >> testfile.txt
                  echo " --------------- "
