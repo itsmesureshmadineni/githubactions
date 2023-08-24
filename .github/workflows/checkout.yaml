@@ -1,0 +1,18 @@
+name: checkout on runner machine
+on: [push]
+
+jobs:
+    checkout-out-run-machine:
+        runs-on: ubuntu-latest
+        steps:
+            - name: list files before
+              run: ls -a
+            - name: checkout
+              run: |
+                git init
+                git remote add origin "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
+                git fetch origin
+                git checkout main
+            - name: list files after
+              run: ls -a
+              
