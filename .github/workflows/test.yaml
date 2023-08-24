@@ -9,10 +9,10 @@ jobs:
               run: pwd
             - name: list files
               run: |
+                 touch test.txt
                  ls -lrth
+                 echo $GITHUB_SHA
+                 echo "-----------"
+                 echo $GITHUB_WORKSPACE
                  echo "------------"
-                 mkdir testfolder
-                 cd testfolder
-                 pwd
-                 touch testfile.txt
-                 echo "::error::missing semicolumn"
+                 echo $GITHUB_REPOSITORY
