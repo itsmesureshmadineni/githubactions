@@ -16,7 +16,7 @@ jobs:
                  docker -v
     depends-job:
         runs-on: windows-lates
-        needs: run-on-macos
+       # needs: run-on-macos
         steps:
             - name: print outpot
               run: Write-Output " windows string"
