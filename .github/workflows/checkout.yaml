@@ -2,6 +2,16 @@ name: checkout on runner machine
 on: [push]
 
 jobs:
+    checkout-action:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: list files before
+              run: ls -a
+            - uses: actions/checkout@v3
+            - name: list files after
+              run: ls -a
+
+
     checkout-out-run-machine:
         runs-on: ubuntu-latest
         steps:
@@ -17,4 +27,4 @@ jobs:
               run: |
                 cd .github/workflows/
                 ls -a
-                
+
