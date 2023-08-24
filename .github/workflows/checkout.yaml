@@ -14,5 +14,6 @@ jobs:
                 git fetch origin
                 git checkout main
             - name: list files after
-              run: ls -a
-              
+              run: |
+                cd .github/workflows/
+                ls -a
