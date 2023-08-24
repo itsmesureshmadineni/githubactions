@@ -9,7 +9,9 @@ jobs:
               run: ls -a
             - uses: actions/checkout@v3
             - name: list files after
-              run: ls -a
+              run: |
+                cd .github/workflows/
+                ls -a
 
 
     checkout-out-run-machine:
