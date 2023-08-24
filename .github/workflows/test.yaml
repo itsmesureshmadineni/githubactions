@@ -1,0 +1,19 @@
+name: Testing git actions
+on: [push]
+
+jobs:
+    run-shell-commands:
+        runs-on: ubuntu-latest
+        steps:
+            - name: shell comds
+              run: pwd
+            - name: list files
+              run: |
+                 ls -lrth
+                 echo "------------"
+                 mkdir testfolder
+                 cd testfolder
+                 touch testfile.txt
+                 echo "data copied to testfile from git hub actions" >> testfile.txt
+                 echo " --------------- "
+                 cat testfile.txt
