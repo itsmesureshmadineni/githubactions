@@ -14,6 +14,7 @@ jobs:
                  pwd
                  npm -v
                  docker -v
+                 pwd
     depends-job:
         runs-on: windows-latest
         needs: run-on-macos
