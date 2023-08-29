@@ -1,0 +1,11 @@
+name: workflow run
+on:
+    workflow_run:
+        workflows: [comment on the pull request]
+        types: [completed]
+
+jobs:
+    echo_string:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "This has been triggered after running of 'comment on the pull request' actions..!"
