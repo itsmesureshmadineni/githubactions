@@ -1,9 +1,15 @@
 name: comment on the pull request 
 on:
+    push:
+      branches:
+        - main
+        - "feature/*" # this pattren matches only for feature/f1.1 or feature/something but doesnot match for feature/something/somthing
+        - "feature/**"  # this matches foe feature/something/somthing
+        - "!feature/fff"  #it excludes specific branch
     pull_request_target:
-        types: [opened, closed]
-        branches: 
-            - 'feature/**'
+        types: [opened]
+    
+
 jobs:
     pr-comment:
         runs-on: ubuntu-latest
@@ -16,5 +22,6 @@ jobs:
                     owner: context.repo.owner,
                     repo: context.repo.repo,
                     issue_number: context.issue.number,
-                    body: 'Thanks for pull request ! it done now',
+                    body: 'Thanks for pull request ! it done now ',
                   });
+
