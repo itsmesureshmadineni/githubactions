@@ -1,9 +1,8 @@
 name: comment on the pull request 
 on:
     pull_request_target:
-        types: [opened, closed]
-        branches: 
-            - 'feature/**'
+        types: [opened]
+
 jobs:
     pr-comment:
         runs-on: ubuntu-latest
