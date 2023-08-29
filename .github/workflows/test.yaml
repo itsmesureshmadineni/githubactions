@@ -14,5 +14,5 @@ jobs:
                  echo $GITHUB_SHA
                  echo "---------"
                  echo $GITHUB_WORKSPACE
-                 echo "------------"
+                 echo "---------"
                  echo $GITHUB_REPOSITORY
