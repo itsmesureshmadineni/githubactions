@@ -12,7 +12,7 @@ jobs:
                  touch test.txt
                  ls -lrth
                  echo $GITHUB_SHA
-                 echo "-----------"
+                 echo "---------"
                  echo $GITHUB_WORKSPACE
-                 echo "------------"
+                 echo "---------"
                  echo $GITHUB_REPOSITORY
