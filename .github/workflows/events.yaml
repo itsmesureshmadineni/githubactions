@@ -1,5 +1,10 @@
 name: checking events
-on: [push, pull_request, issues]
+on:
+    push:
+    pull_request:
+        types: [opened, closed, edited]
+    issues: 
+        types: [opened]
 
 jobs:
     checkout-test:
