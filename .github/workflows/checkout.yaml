@@ -28,5 +28,5 @@ jobs:
             - name: list files after
               run: |
                 cd .github/workflows/
-                ls -a
+                ls -lrth
 
