@@ -1,0 +1,12 @@
+name: Scheduling the workflow
+on:
+    schedule:
+        - cron: "* * * * *"
+
+jobs:
+    printing-a-string:
+        runs-on: ubuntu-latest
+        steps:
+            - run: |
+                echo "This is to test the cron job"
+                echo "---------x-----------"
