@@ -4,9 +4,11 @@ on:
         - cron: "* * * * *"
 
 jobs:
-    printing-a-string:
+    stale:
         runs-on: ubuntu-latest
         steps:
-            - run: |
-                echo "This is to test the cron job"
-                echo "---------x-----------"
+            - uses: actions/stale@v8
+              with:
+                stale-issue-message: "this is test"
+                days-before-stale: 2
+                days-before-close: 5
