@@ -1,9 +1,16 @@
 name: manual trigger
 on:
     workflow_dispatch:
+        inputs:
+            string:
+                description: A string value
+                type: string
+                default: "please eneter a value"
 
 jobs:
     login-info:
         runs-on: ubuntu-latest
         steps:
             - run: echo $GITHUB_REF
+            - run: |
+               echo ${{ inputs.string }}
