@@ -1,7 +1,7 @@
 name: Scheduling the workflow
 on:
     schedule:
-        - cron: "* * * * *"
+        - cron: "0/5 * * * *"
 
 jobs:
     stale:
