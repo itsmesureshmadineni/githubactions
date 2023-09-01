@@ -8,7 +8,7 @@ jobs:
             - name: expression
               run: |
                  echo ${{ 1 }}
-                 echo ${{ 'this is a string' }}
+                 echo ${{ 'this is string' }}
             - name: Dump contexts
               run: |
                 echo '${{ toJson(job) }}'
