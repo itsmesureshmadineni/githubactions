@@ -1,0 +1,15 @@
+name: Expression and contexts
+on: [push, pull_request]
+
+jobs:
+    expression-contexts:
+        runs-on: ubuntu-latest
+        steps:
+            - name: expression
+              run: |
+                 echo ${{ 1 }}
+                 echo ${{ 'this is a string' }}
+            - name: Dump contexts
+              run: |
+                echo '${{ toJson(job) }}'
+                echo '${{ toJson(runner) }}'
